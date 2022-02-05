@@ -12,7 +12,8 @@
 
 <div id="main-wrapper">
     <div id="my-form">
-        <div id="interface"><label for="activity-name">Activity:</label>
+        <div id="interface">
+            <label for="activity-name">Activity:</label>
             <input type="text" id="activity-name">
             <label for="duration">Time:</label>
             <input type="text" id="duration">
@@ -34,13 +35,26 @@
         crossorigin="anonymous"></script>
 <script>
     function addActivity() {
-        $.post("http://localhost:8080/activities", function (data) {
-            console.log(data);
-            $("#results").append(
-                "<li>".concat(data.activity, ", ", data.duration, ", at ", data.createdAt, "</li>")
-            );
-        })
+
+        activityRequest = {
+            activityName: `${$("#interface > #activity-name").val()}`,
+            time: `${$("#interface > #duration").val()}`
+        };
+
+        $.ajax({
+            url: "https://sport-activity.herokuapp.com/activities",
+            type: "POST",
+            dataType: "json",
+            contentType: "application/json; charset=utf-8",
+            data: JSON.stringify(activityRequest),
+            success: function (data) {
+                $("#results").append(
+                    "<li>".concat(data.activity, ", ", data.duration, ", at ", data.createdAt, "</li>")
+                );
+            }
+        });
     }
+
     $(function () {
         $('[data-toggle="popover"]').popover();
     })

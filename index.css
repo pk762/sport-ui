@@ -1,5 +1,5 @@
 #main-wrapper {
-    background-color: gray;
+    /*background-color: gray;*/
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -7,7 +7,7 @@
 }
 
 #my-form {
-    background-color: red;
+    /*background-color: red;*/
     margin: auto;
     display: flex;
     flex-direction: column;
