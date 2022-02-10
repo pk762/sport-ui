@@ -1,0 +1,27 @@
+body {
+    margin: 0;
+    font-family: "Times New Roman", Times, serif;
+    font-size: 200%;
+    background-color: #a4c5db;
+}
+
+#menu {
+    background-color: #1C6EA4;
+}
+
+#c-main {
+}
+
+#c-tabs {
+
+}
+
+#c-tabs md-tab-item {
+    min-width: 72px;
+}
+
+@media (min-width: 960px) {
+    #c-tabs md-tab-item {
+        min-width: 160px;
+    }
+}
