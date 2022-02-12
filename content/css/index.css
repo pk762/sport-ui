@@ -1,27 +1,53 @@
+html {
+    height: 100%;
+}
+
 body {
+    height: 100%;
     margin: 0;
     font-family: "Times New Roman", Times, serif;
     font-size: 200%;
-    background-color: #a4c5db;
+    background-color: darkolivegreen;
 }
 
 #menu {
-    background-color: #1C6EA4;
+    /*background-color: #1C6EA4;*/
 }
 
-#c-main {
+/* BALANCE VIEW STYLE */
+.c-balance {
+    display: flex;
+    justify-content: center;
+    background-color: wheat;
+    align-items: center;
+    height: 100%;
+    font-size: 300%;
 }
 
-#c-tabs {
-
+/* ACTIVITIES VIEW STYLE */
+.c-activities {
+    display: flex;
+    justify-content: center;
+    background-color: #9E9E9E;
+    align-items: center;
+    height: 100%;
+    font-size: x-large;
 }
 
-#c-tabs md-tab-item {
-    min-width: 72px;
-}
 
-@media (min-width: 960px) {
-    #c-tabs md-tab-item {
-        min-width: 160px;
-    }
+/* ANGULAR-TABS */
+/*md-content {*/
+/*    padding: 0 !important;*/
+/*}*/
+
+/*md-tabs {*/
+/*    min-height: 100vh !important;*/
+/*}*/
+
+/*.ng-scope {*/
+/*    height: 100%;*/
+/*}*/
+
+.md-tab {
+    font-size: inherit !important;
 }

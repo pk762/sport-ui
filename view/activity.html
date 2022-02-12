@@ -1,0 +1,20 @@
+<div class="ng-scope c-activities styled-table">
+    <table class="styled-table">
+        <thead>
+        <tr>
+            <th>time</th>
+            <th>date</th>
+            <th>earn</th>
+            <th>work</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr ng-repeat="activity in activities">
+            <td>{{activity.time}}</td>
+            <td>{{activity.date}}</td>
+            <td>{{activity.earn}}</td>
+            <td>{{activity.work}}</td>
+        </tr>
+        </tbody>
+    </table>
+</div>

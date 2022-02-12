@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title>Activities</title>
     <link href="content/css/index.css" rel="stylesheet" type="text/css">
+    <link href="content/css/styled-table.css" rel="stylesheet" type="text/css">
     <link href="app/lib/angular-material.css" rel="stylesheet" type="text/css">
     <script src="app/lib/angular.js"></script>
     <script src="app/lib/angular-route.js"></script>
@@ -14,19 +15,15 @@
     <script src="app/app.js"></script>
 </head>
 <body>
-<div id="menu">
-</div>
-<div id="c-main">
-    <input type="text" ng-model="testVar" placeholder="test me"/>
-    {{testVar}}
-    <div id="c-tabs">
-        <md-content class="md-padding">
-            <md-tabs md-stretch-tabs="always">
-                <md-tab label="Tab1"></md-tab>
-                <md-tab label="Tab2"></md-tab>
-            </md-tabs>
-        </md-content>
-    </div>
-</div>
+<md-content ng-controller="SportUiMainController">
+    <md-tabs class="md-primary" md-stretch-tabs="always" md-dynamic-height="">
+        <md-tab label="Balance" md-tab-class="my-content-tab">
+            <div class="ng-scope" ng-include="'view/balance.html'" style="height: 100%"></div>
+        </md-tab>
+        <md-tab label="Activities" md-tab-class="my-content-tab">
+            <div class="ng-scope" ng-include="'view/activity.html'" style="height: 100%"></div>
+        </md-tab>
+    </md-tabs>
+</md-content>
 </body>
 </html>
