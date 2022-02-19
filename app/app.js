@@ -21,11 +21,10 @@ sportUiApp.controller('SportUiMainController', ['$scope', '$http', function ($sc
         $http.post(window.__env.apiUrl + "/activities", data)
             .then(function (response) {
                 console.log(response.data)
+                $scope.onBalanceSelect();
             }, function (response) {
                 console.log(response.data)
             });
-
-        $scope.onBalanceSelect();
 
         console.log($scope.newActivity.time + ":" + $scope.newActivity.date.toLocaleDateString(
             "de-DE", {weekday: "short", month: "short", year: "numeric", day: "2-digit"}
