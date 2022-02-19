@@ -1,5 +1,12 @@
 <div class="c-balance">
     <div>
-        {{balance.balance}}
+        {{balance}}
     </div>
 </div>
+<form id="form-add-activity" ng-submit="addActivity()">
+    <input type="text" ng-model="newActivity.time" >
+    <md-datepicker ng-model="newActivity.date"></md-datepicker>
+    <input type="text" ng-model="newActivity.date" hidden>
+    <input type="text" ng-model="newActivity.work" >
+    <input type="submit" value="add activity">
+</form>

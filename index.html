@@ -6,6 +6,7 @@
     <link href="content/css/index.css" rel="stylesheet" type="text/css">
     <link href="content/css/styled-table.css" rel="stylesheet" type="text/css">
     <link href="app/lib/angular-material.css" rel="stylesheet" type="text/css">
+    <script src="app/env.js"></script>
     <script src="app/lib/angular.js"></script>
     <script src="app/lib/angular-route.js"></script>
     <script src="app/lib/angular-animate.js"></script>
@@ -17,10 +18,10 @@
 <body>
 <md-content ng-controller="SportUiMainController">
     <md-tabs class="md-primary" md-stretch-tabs="always" md-dynamic-height="">
-        <md-tab label="Balance" md-tab-class="my-content-tab">
+        <md-tab label="Balance" md-tab-class="my-content-tab" md-on-select="onBalanceSelect()">
             <div class="ng-scope" ng-include="'view/balance.html'" style="height: 100%"></div>
         </md-tab>
-        <md-tab label="Activities" md-tab-class="my-content-tab">
+        <md-tab label="Activities" md-tab-class="my-content-tab"  md-on-select="onActivitiesSelect()">
             <div class="ng-scope" ng-include="'view/activity.html'" style="height: 100%"></div>
         </md-tab>
     </md-tabs>
